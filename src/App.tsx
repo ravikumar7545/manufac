@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import winedata from './Wine-Data.json'
+import LineChart from './components/LineChart';
+import BarChart from './components/BarChart';
+import  './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App  = ()=>{
+  let filterAsh = winedata.map(ele=> ele.Ash)
+  let filteredFlavanoids = winedata.map(ele=> ele.Flavanoids)
+  let filteredMagnesium = winedata.map(ele=> ele.Magnesium)
+  let filteredAlcohol = winedata.map(ele=> ele.Alcohol)
+
+
+  console.log(filterAsh,filteredFlavanoids)
+
+ 
+  return <div>
+  
+    <LineChart value = {{filteredFlavanoids,filterAsh}}/>
+    <BarChart value={{filteredMagnesium,filteredAlcohol}}/>
+    
+  </div>
 }
 
 export default App;
