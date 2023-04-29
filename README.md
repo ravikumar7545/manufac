@@ -3,3 +3,9 @@ yarn start
 
 For building the project, type command:
 yarn build
+
+
+Images of the charts:
+
+![](line_chart.png)
+![](bar_chart.png)
