@@ -8,4 +8,4 @@ yarn build
 Images of the charts:
 
 ![](line_chart.png)
-![](bar_chart.png)
+![](barChart.png)
